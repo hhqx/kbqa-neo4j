@@ -46,28 +46,28 @@ docker exec -ti kbqa-neo4j-v1.0 /bin/bash
 
 - 输入账号密码连接
 
-  ![image-20220510020711514](Final\img\image-20220510020711514.png)
+  ![image-20220510020711514](Final/img/image-20220510020711514.png)
 
 - 连接成功
 
-   ![image-20220510022118621](Final\img\image-20220510022118621.png)
+   ![image-20220510022118621](Final/img/image-20220510022118621.png)
 
 ### 访问jupyter, 导入数据到neo4j, 运行kbqa示例
 
 - 访问jupter主页: http://10.184.17.45:39994/, **默认密码为:`jupyter`**
 
-  ![image-20220510022411108](Final\img\image-20220510022411108.png)
+  ![image-20220510022411108](Final/img/image-20220510022411108.png)
 
   ----
 
 - 访问 [src](http://10.184.17.45:39998/tree/src) 文件夹
 
-  ![image-20220510022627220](Final\img\image-20220510022627220.png)
+  ![image-20220510022627220](Final/img/image-20220510022627220.png)
 
 - 进入 [movie_QA_with_KQ.ipynb](http://10.184.17.45:39998/notebooks/src/movie_QA_with_KQ.ipynb), 运行全部cell
 
-  ![image-20220510022941932](Final\img\image-20220510022941932.png)
+  ![image-20220510022941932](Final/img/image-20220510022941932.png)
 
 - 等待程序结束, 查看结果
 
-  ![image-20220510023040840](Final\img\image-20220510023040840.png)
+  ![image-20220510023040840](Final/img/image-20220510023040840.png)
