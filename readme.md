@@ -4,10 +4,16 @@
 
 ## 来源
 
-- 仓库fork自 [hlnn](https://github.com/hlnn) 的 https://github.com/HLNN/NLP/tree/master/Final
-- 添加了docker配置镜像的部分
+- 仓库 fork 自 [hlnn](https://github.com/hlnn) 的 https://github.com/HLNN/NLP/tree/master/Final
+- 添加了 docker 配置镜像的部分
+- 新增 jupter 服务器配置部分
 
 ## 运行说明
+ (注: 以下是校园内网环境下配置, 本地运行请自行修改相应端口)
+- 整体运行流程是:
+  1. 构建 neo4j 数据库, python3.6+jupyter-notebook 的环境, 启动neo4j和jupyter
+  2. 访问 neo4j 网页, 修改默认密码
+  3. 访问 jupyter 服务器, 运行demo, 导入数据库, 初始化模板分类器, 知识库问答
 
 ### 下载
 
@@ -25,7 +31,7 @@
   wget https://dist.neo4j.org/neo4j-community-4.4.6-unix.tar.gz
   ```
 
-### 创建镜像
+### 创建镜像 
 
 ```shell
 # 创建镜像
@@ -46,28 +52,28 @@ docker exec -ti kbqa-neo4j-v1.0 /bin/bash
 
 - 输入账号密码连接
 
-  ![image-20220510020711514](Final\img\image-20220510020711514.png)
+  ![image-20220510020711514](img/image-20220510020711514.png)
 
 - 连接成功
 
-   ![image-20220510022118621](Final\img\image-20220510022118621.png)
+   ![image-20220510022118621](img/image-20220510022118621.png)
 
 ### 访问jupyter, 导入数据到neo4j, 运行kbqa示例
 
 - 访问jupter主页: http://10.184.17.45:39994/, **默认密码为:`jupyter`**
 
-  ![image-20220510022411108](Final\img\image-20220510022411108.png)
+  ![image-20220510022411108](img/image-20220510022411108.png)
 
   ----
 
 - 访问 [src](http://10.184.17.45:39998/tree/src) 文件夹
 
-  ![image-20220510022627220](Final\img\image-20220510022627220.png)
+  ![image-20220510022627220](img/image-20220510022627220.png)
 
 - 进入 [movie_QA_with_KQ.ipynb](http://10.184.17.45:39998/notebooks/src/movie_QA_with_KQ.ipynb), 运行全部cell
 
-  ![image-20220510022941932](Final\img\image-20220510022941932.png)
+  ![image-20220510022941932](img/image-20220510022941932.png)
 
 - 等待程序结束, 查看结果
 
-  ![image-20220510023040840](Final\img\image-20220510023040840.png)
+  ![image-20220510023040840](img/image-20220510023040840.png)
