@@ -1,0 +1,70 @@
+
+_____________________________________________________ latest _______________________________
+# 创建镜像
+docker build  -f "Dockerfile" -t kbqaneo4j:latest .
+
+从镜像建立容器
+# 创建容器 from 
+docker run -deteach -p 8474:7474 -p 8488:8888 --interactive --tty --name neo4j-latest kbqaneo4j:latest
+
+docker run -deteach -p 8474:7474 -p 7687:7687 -p 8488:8888 --interactive --tty --name neo4j-latest kbqaneo4j:latest
+
+
+# 进入容器
+docker exec -ti neo4j-latest bash
+
+# 开启容器
+docker start neo4j-latest
+_____________________________________________________ debug _______________________________
+# 创建镜像
+docker build  -f "Dockerfile" -t kbqaneo4j:debug .
+
+从镜像建立容器
+# 创建容器 from 
+docker run -deteach -p 8474:7474 -p 8488:8888 --interactive --tty --name neo4j-latest kbqaneo4j:latest
+
+
+# 进入容器
+docker exec -ti neo4j-latest bash
+
+# 开启容器
+docker start neo4j-latest
+
+_____________________________________________________ 分割线 _____________________________________
+netstat -anp|grep 80
+
+lsof -i:88588 |grep -v grep 
+_____________________________________________________ 重构版v3.0 _______________________________
+# 创建镜像
+docker build  -f "Dockerfile" -t kbqaneo4j:v3.0 .
+
+# 创建容器 from 
+docker run -deteach -p 8474:7474 -p 8488:8888 --interactive --tty --name neo4jv3.0 kbqaneo4j:v3.0
+
+# 进入容器
+docker exec -ti neo4jv3.0 /bin/bash
+
+_____________________________________________________ 重构版v3.1 _______________________________
+# 创建镜像
+docker build  -f "Dockerfile" -t kbqaneo4j:v3.1 .
+
+# 创建容器 from 
+docker run -deteach -p 8474:7474 -p 8488:8888 --interactive --tty --name neo4jv3.1 kbqaneo4j:v3.1
+
+# 进入容器
+docker exec -ti neo4jv3.1 /bin/bash
+
+_____________________________________________________ 提交版v1.0 _______________________________
+# 创建镜像
+docker build  -f "Dockerfile" -t kbqa:neo4j-v1.0 .
+
+# 创建容器 from 
+docker run -deteach -p 8474:7474 -p 8488:8888 --interactive --tty --name kbqa-neo4j-v1.0 kbqa:neo4j-v1.0
+docker run -deteach -p 8474:7474 -p 7687:7687 -p 8488:8888 --interactive --tty --name kbqa-neo4j-v1.0 kbqa:neo4j-v1.0
+
+docker run -deteach -p 8474:7474 -p 8487:7687 -p 8488:8888 --interactive --tty --name kbqa-neo4j-p8487 kbqa:neo4j-v1.0
+
+
+
+# 进入容器
+docker exec -ti neo4jv3.1 /bin/bash

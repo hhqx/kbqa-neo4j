@@ -1,0 +1,10 @@
+FROM kbqaneo4j:latest
+
+
+# # 启动neo4j
+# RUN /app/neo4j-community-4.4.6/bin/neo4j start
+# RUN app/change-neo4j-pwr
+ADD ./dockfiles /app
+ADD ./start.sh /app/app/
+WORKDIR /app
+# CMD ["/app/start.sh"]
