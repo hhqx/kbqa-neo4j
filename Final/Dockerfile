@@ -64,7 +64,7 @@ ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
 
 # # 启动neo4j 和 jupyter
 RUN mkdir /app/logs
- RUN ["chmod", "+x", "./start.sh"]
+RUN ["chmod", "+x", "./start.sh"]
 # CMD ["/app/start.sh"]
 ENTRYPOINT /bin/bash /app/start.sh && /bin/bash
 
