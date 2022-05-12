@@ -1,3 +1,14 @@
+
+# 基于neo4j知识图谱的KBQA
+
+整理后部署在69服务器的docker容器中: [neo4j数据库](http://10.184.17.45:39994/browser/), [jupyter demo](http://10.184.17.45:39998/notebooks/src/movie_QA_with_KQ.ipynb)
+
+github代码: [基于neo4j和模板匹配的kbqa](https://github.com/hhqx/kbqa-neo4j)
+
+
+
+
+
 # 基于知识图谱的KBQA-demo, 来自: [SimmerChan-ZJU](https://github.com/SimmerChan/KG-demo-for-movie)
 
 整理后运行在69服务器的docker容器中: [demo链接](http://10.184.17.45:39990/)
@@ -25,17 +36,6 @@
 ### 3. 调用预先定义好的SPARQL查询命令, 打印结果
 
 这里查询的是RDF(Resource Description Framework)服务器(Fuseki), 查询语言是SPARQL
-
-
-
-
-
-# 基于neo4j知识图谱的KBQA
-
-整理后部署在69服务器的docker容器中: [neo4j数据库](http://10.184.17.45:39994/browser/), [jupyter demo](http://10.184.17.45:39998/notebooks/src/movie_QA_with_KQ.ipynb)
-
-github代码: [基于neo4j和模板匹配的kbqa](https://github.com/hhqx/kbqa-neo4j)
-
 
 
 
